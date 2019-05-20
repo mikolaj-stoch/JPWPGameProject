@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="237dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/battleground"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/enemyCurrStamina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:elevation="2dp"
+            android:text="10/10"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toEndOf="@+id/enemyPB_Stamina"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/enemyPB_Stamina" />
+
+        <TextView
+            android:id="@+id/playerCurrStamina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:elevation="2dp"
+            android:text="10/10"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toEndOf="@+id/playerPB_HP"
+            app:layout_constraintHorizontal_bias="0.546"
+            app:layout_constraintStart_toStartOf="@+id/playerPB_Stamina"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameConst"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="Enemy"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toStartOf="@+id/constEnemyHP"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/enemyPB_Hp"
+            style="@style/hpBar"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/progress_hp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/enemyPB_Stamina"
+            style="@style/staminaBar"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/progress_stamina"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enemyPB_Hp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:text="Stamina"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toStartOf="@+id/enemyPB_Stamina"
+            app:layout_constraintTop_toBottomOf="@+id/constPlayerHP" />
+
+        <TextView
+            android:id="@+id/constEnemyHP"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="20dp"
+            android:text="HP"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toStartOf="@+id/enemyPB_Hp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/constPlayerStamina"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="78dp"
+            android:layout_marginLeft="78dp"
+            android:text="Stamina"
+            android:textColor="@color/darkText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constPlayerHP" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="You"
+            android:textColor="@color/darkText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/playerPB_HP"
+            style="@style/hpBar"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/progress_hp"
+            app:layout_constraintStart_toEndOf="@+id/constPlayerHP"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/enemyCurrHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:elevation="2dp"
+            android:text="10/10"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toEndOf="@+id/enemyPB_Hp"
+            app:layout_constraintStart_toEndOf="@+id/constEnemyHP"
+            app:layout_constraintTop_toTopOf="@+id/enemyPB_Hp" />
+
+        <ProgressBar
+            android:id="@+id/playerPB_Stamina"
+            style="@style/staminaBar"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:background="@drawable/progress_stamina"
+            app:layout_constraintStart_toEndOf="@+id/constPlayerStamina"
+            app:layout_constraintTop_toBottomOf="@+id/playerPB_HP" />
+
+        <TextView
+            android:id="@+id/constPlayerHP"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:text="HP"
+            android:textColor="@color/darkText"
+            app:layout_constraintStart_toEndOf="@+id/playerName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#683515"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/playerCurrHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:elevation="2dp"
+            android:text="10/10"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toEndOf="@+id/playerPB_HP"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toEndOf="@+id/constPlayerHP"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="320dp"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ToggleButton
+            android:id="@+id/heavyAttackBtn"
+            android:layout_width="138dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:textOn="Heavy attack"
+            android:textOff="Heavy attack"
+            android:background="@drawable/fight_button"
+            android:textColor="@drawable/button_text"
+            app:layout_constraintStart_toEndOf="@+id/mediumAttackBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/mediumAttackBtn"
+            android:layout_width="138dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:textOn="Medium attack"
+            android:textOff="Medium attack"
+            android:textColor="@drawable/button_text"
+            android:background="@drawable/fight_button"
+            app:layout_constraintStart_toEndOf="@+id/fastAttackBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/blockBtn"
+            android:layout_width="138dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textOn="Block"
+            android:textOff="Block"
+            android:background="@drawable/fight_button"
+            android:textColor="@drawable/button_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fastAttackBtn" />
+
+        <ToggleButton
+            android:id="@+id/fastAttackBtn"
+            android:layout_width="138dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textOff="Fast attack"
+            android:textOn="Fast attack"
+            android:background="@drawable/fight_button"
+            android:textColor="@drawable/button_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailsText"
+            android:layout_width="150dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border"
+            android:text="Choose action to get more details"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/actionBtn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_button"
+            android:text="Action"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/detailsText"
+            app:layout_constraintTop_toBottomOf="@+id/heavyAttackBtn"
+            app:layout_constraintVertical_bias="0.703" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

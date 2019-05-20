@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/pause_width"
+    android:layout_height="@dimen/pause_height"
+    android:layout_gravity="center"
+    android:fontFamily="@font/breathe_fire"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:scaleType="center"
+        android:text="Menu"
+        android:textAllCaps="true"
+        android:padding="10dp"
+        android:fontFamily="@font/breathe_fire"
+        android:textSize="@dimen/text_size2"
+        android:textColor="@color/textColor" />
+    <Button
+        android:id="@+id/resume"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Resume"
+        android:fontFamily="@font/breathe_fire"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"/>
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="@font/breathe_fire"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Exit"/>
+</LinearLayout>

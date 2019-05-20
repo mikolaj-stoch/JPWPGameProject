@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#898989"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xpOnBar" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#898989"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/staminaText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#898989"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staminaOnBar" />
+
+    <TextView
+        android:id="@+id/strengthPoints"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="15"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/strengthBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textConst" />
+
+    <Button
+        android:id="@+id/strengthBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:padding="0dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textConst" />
+
+    <Button
+        android:id="@+id/vitalityBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:padding="0dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agilityBtn" />
+
+    <ProgressBar
+        android:id="@+id/staminaBar"
+        style="@style/staminaBar"
+        android:layout_width="246dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpBar" />
+
+    <TextView
+        android:id="@+id/statisticsHeader"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Statistics"
+        android:textColor="@color/textColor"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/availablePoints"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <Button
+        android:id="@+id/wisdomBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:padding="0dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vitalityBtn" />
+
+    <TextView
+        android:id="@+id/hpText"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="HP"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/hpBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center_vertical"
+        android:text="Strength"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/strengthPoints"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsHeader" />
+
+    <TextView
+        android:id="@+id/agility"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center_vertical"
+        android:text="Agility"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/agilityPoints"
+        app:layout_constraintTop_toBottomOf="@+id/strength" />
+
+    <TextView
+        android:id="@+id/hpOnBar"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:elevation="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="#00000000"
+        android:gravity="center"
+        android:text="50/100"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/hpBar"
+        app:layout_constraintEnd_toEndOf="@+id/hpBar"
+        app:layout_constraintStart_toStartOf="@+id/hpBar"
+        app:layout_constraintTop_toTopOf="@+id/hpBar" />
+
+    <TextView
+        android:id="@+id/vitalityPoints"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="15"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/vitalityBtn"
+        app:layout_constraintTop_toBottomOf="@+id/agilityPoints" />
+
+    <TextView
+        android:id="@+id/agilityPoints"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="15"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/agilityBtn"
+        app:layout_constraintTop_toBottomOf="@+id/strengthPoints" />
+
+    <TextView
+        android:id="@+id/staminaOnBar"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="#00000000"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="50/100"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/staminaBar"
+        app:layout_constraintEnd_toEndOf="@+id/staminaBar"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/staminaBar"
+        app:layout_constraintTop_toTopOf="@+id/staminaBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#898989"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nicknameText" />
+
+    <TextView
+        android:id="@+id/staminaText"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Stamina"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/staminaBar"
+        app:layout_constraintTop_toBottomOf="@+id/hpText" />
+
+    <TextView
+        android:id="@+id/availablePoints"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/textConst"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <ProgressBar
+        android:id="@+id/hpBar"
+        style="@style/hpBar"
+        android:layout_width="246dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/agilityBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:padding="0dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/strengthBtn" />
+
+    <TextView
+        android:id="@+id/wisdomPoints"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="15"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/wisdomBtn"
+        app:layout_constraintTop_toBottomOf="@+id/vitalityPoints" />
+
+    <TextView
+        android:id="@+id/textConst"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:gravity="center_vertical"
+        android:text="points left"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/wisdom"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center_vertical"
+        android:text="Wisdom"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/wisdomPoints"
+        app:layout_constraintTop_toBottomOf="@+id/vitality" />
+
+    <TextView
+        android:id="@+id/vitality"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center_vertical"
+        android:text="Vitality"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/vitalityPoints"
+        app:layout_constraintTop_toBottomOf="@+id/agility" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="2dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#898989"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/nicknameText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Player name: "
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nicknameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="nickname"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Level:"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toEndOf="@+id/nicknameText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="XP: "
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ProgressBar
+        android:id="@+id/xpPB"
+        style="@style/xpBar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:progress="50"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/xpOnBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100/100"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/xpPB"
+        app:layout_constraintEnd_toEndOf="@+id/xpPB"
+        app:layout_constraintStart_toStartOf="@+id/xpPB"
+        app:layout_constraintTop_toTopOf="@+id/xpPB" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="ACTIVE OBJECTIVES"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/missionConstraint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TextView
+            android:id="@+id/missionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="Your only mission"
+            android:background="@color/darkBackground"
+            android:textColor="@color/textColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Brief description"
+            android:padding="@dimen/padding"
+            android:textColor="@color/textColor"
+            android:background="@color/darkBackground"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/missionName" />
+
+        <TextView
+            android:id="@+id/missionDescr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Find and kill Edrick"
+            android:padding="@dimen/padding"
+            android:scrollbars = "vertical"
+            android:textColor="@color/textColor"
+            android:background="@color/darkBackground"
+            app:layout_constraintBottom_toTopOf="@+id/missionGoal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/missionName" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Misson: "
+            android:padding="@dimen/padding"
+            android:background="@color/darkBackground"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/padding"
+            android:text="Goal:"
+            android:background="@color/darkBackground"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/missionGoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/padding"
+            android:text="Kill Edrick"
+            android:background="@color/darkBackground"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView15" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

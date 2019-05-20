@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="staminaError">Recover your stamina!</string>
+    <string name="dialogTitle">You cannot do this</string>
+    <string name="healingPotion">Healing Potion</string>
+    <string name="staminaPotion">Stamina Potion</string>
+    <string name="itemNotChosen">Choose item to get more details</string>
+    <string name="emptyChest">Chest is empty</string>
+    <string name="mission1">Surrounding lands are invading by strangers.
+    You decided, as the local knight, who promised to protect these lands, to take things in hand.
+        Villagers told you, that the man who stands behind invasion is called Edrick.\nFind Edrick and solve the problem.</string>
+</resources>

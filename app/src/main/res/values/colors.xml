@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textColor">#cccccc</color>
+    <color name="backgroundColor">#424242</color>
+    <color name="staminaColor">#e09b06</color>
+    <color name="notPressed">#b20000</color>
+    <color name="pressed">#e50000</color>
+    <color name="borderColor">#afafaf</color>
+    <color name="darkText">#28231f</color>
+    <color name="releasedBtn">#262626</color>
+    <color name="pressedBtn">#6d6d6d</color>
+    <color name="inventorySlot">#565656</color>
+    <color name="brown">#332314</color>
+    <color name="hpColor">#B30D0D</color>
+    <color name="xpColor">#008D03</color>
+    <color name="alert_color">#C00000</color>
+    <color name="releasedBtn2">#B6960B</color>
+    <color name="pressedBtn2">#EEFF00</color>
+    <color name="darkBackground">#313131</color>
+</resources>
