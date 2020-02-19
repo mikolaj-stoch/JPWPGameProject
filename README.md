@@ -12,11 +12,11 @@ Our game is set in medival land. Your objective, as the player is to find weapon
 
 ## Gameplay
 
-# Main view
+### Main view
 
 ![Main View](https://github.com/miko083/JPWPGameProject/blob/master/images/game.jpg)
 
-# Features
+### Features
 
 * Move player by tapping on the screen.
 * Access to the equipment and weapons menus ( at the right side of the screen).
@@ -24,7 +24,7 @@ Our game is set in medival land. Your objective, as the player is to find weapon
 * Fight with enemies.
 * Check objective.
 
-# Video of the gameplay
+### Video of the gameplay
 
 [![Watch the video](https://github.com/miko083/JPWPGameProject/blob/master/images/video.jpg)](https://photos.google.com/share/AF1QipMxM5LfFlMNlLHAtouJA0q81LnfgpPbJb4CnFIo0JXZTRwOWALHZa18zy9tpMmazQ/photo/AF1QipPbZzFWuzEWOkti8IJcbDDSySRxJ4WPcuNw0KT9?key=SEZDeG9sTDZoVTN0QVRhUy1DNm5KYTA4WWRMdmN3)
 
