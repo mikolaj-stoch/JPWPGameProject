@@ -26,6 +26,8 @@ Our game is set in medival land. Your objective, as the player is to find weapon
 
 ### Video of the gameplay
 
+(Click on the movie)
+
 [![Watch the video](https://github.com/miko083/JPWPGameProject/blob/master/images/video.jpg)](https://photos.google.com/share/AF1QipMxM5LfFlMNlLHAtouJA0q81LnfgpPbJb4CnFIo0JXZTRwOWALHZa18zy9tpMmazQ/photo/AF1QipPbZzFWuzEWOkti8IJcbDDSySRxJ4WPcuNw0KT9?key=SEZDeG9sTDZoVTN0QVRhUy1DNm5KYTA4WWRMdmN3)
 
 ## Want more information ?
