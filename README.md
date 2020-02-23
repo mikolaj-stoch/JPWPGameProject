@@ -36,5 +36,5 @@ Check our presentation which was created for participants of JPWP classes => [Cl
 
 ## Authors
 
-* Dawid Jakóbczak
-* Mikołaj Stoch
+* [Dawid Jakóbczak](https://github.com/Infam852) - game engine, animation, character movement, turn-based combat, equipment, statistics and character development, items and their impact on the character.
+* [Mikołaj Stoch](https://github.com/miko083) - drawing the background and objects (changing the position of objects due to the movement of the character), camera mechanism, the system of transition between the building and the "outside".
