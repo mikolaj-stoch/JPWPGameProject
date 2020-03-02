@@ -57,7 +57,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public static int screenW;
     public static int screenH;
-   // private boolean onTitle;
 
     private Context context;
     private SurfaceHolder surfaceHolder;
@@ -69,24 +68,21 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private CustomButton menuButton;
     private CustomButton playerStats;
     private CustomButton weaponEqBtn;
-//    private CustomButton combatButton;
 
     //game objects
     private Player player;
     private ArrayList<Mob1> enemies;
     private Chest chest;
 
-    //private Mob1 enemy1;
     private Inventory inventory;
 
-    private ArrayList<GameObject> trees; //Maybe better in table and draw randomly on map. Test purpose for now.
+    private ArrayList<GameObject> trees; 
     private ArrayList<GameObject> stones;
-    private ArrayList<GameObject> clickableItems;        //currently for chests
+    private ArrayList<GameObject> clickableItems;   
 
     private int numberOfTrees = 7;
     private int numberOfStones = 3;
 
-//    private Bitmap backgroundImg;
     private BitmapSheet playerSheet;
     private BitmapSheet itemsSheet;
 
@@ -173,12 +169,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 250,450,"Tree " + 3,this,true));
         trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
                 250,450,"Tree " + 4,this,true));
-//        trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
-//                300,560,"Tree " + 5,this,true));
-//        trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
-//                290,560,"Tree " + 6,this,true));
-//        trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
-//                330,560,"Tree " + 7,this,true));
+
         trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
                 650,360,"Tree " + 7,this,true));
         trees.add(new GameObject(BitmapFactory.decodeResource(getResources(), R.drawable.tree),
@@ -266,15 +257,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         itemPack = new CustomButton(position3.x,position3.y,invBtn,context, new InventoryDialog(this.context, this.inventory, this.player));
         menuBar.addElement(itemPack);
 
-        // init combat btn
-//        Point position4 = menuBar.getPostion(4);
-//        Bitmap combatIcon = getResizedBitmap(BitmapFactory.decodeResource(context.getResources(),
-//                R.drawable.fight_icon), elementSize, elementSize);
-//        ac = new ActivityCreator(this.context, this.player, 1);
-//        ac.setEnemy(enemy1);
-//
-//        combatButton = new CustomButton(position4.x, position4.y, combatIcon, context, ac);
-//        menuBar.addElement(combatButton);
+
         Point position4 = menuBar.getPostion(4);
         Bitmap weaponEq = getResizedBitmap(BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.battle_gear), elementSize, elementSize);
@@ -317,8 +300,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         enemy2.setLoot(loot2);
 
-
-
         enemy3 = new Mob1(context, BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.enemy_lvl3), this, 200, 500, 3, "Edrick",
                 20, 5, 20, 18, 120,false);
@@ -331,8 +312,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         }
 
         enemy3.setLoot(loot3);
-
-
 
         Mob1 enemy4 = new Mob1(context, BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.enemy_lvl2), this, 700, 1200, 2,"Invader",
@@ -356,9 +335,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         super.draw(canvas);
         final float scaleFactorX = getWidth() / (float) WIDTH; //Scalling factor. Added in 0.1
         final float scaleFactorY = getHeight()/ (float) HEIGHT;
-        //Log.d("Draw", "onDraw is being executed");
         if(canvas != null){
-            //canvas.drawColor(Color.BLACK);
             final int savedState = canvas.save(); //Added in 0.1
 
             canvas.scale(scaleFactorX, scaleFactorY);
@@ -405,24 +382,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             switch (eventAction) {
 
                 case MotionEvent.ACTION_DOWN: {
-
-                    //checkOverlays(xNew, yNew); Dead function
-                    /*
-                    if (xNew < menuBar.getRect().left) {      //player can not move outside the view
-                        //player.setPosition(xNew, yNew);
-                        //player.setCenterFunctionUsed(false);
-
-                    }
-                    */
                     for (CustomButton element : menuBar.getOptions()) {
                         element.checkClick(xNew, yNew, this);
                     }
-                    //itemPack.checkClick(x_new, y_new);       //check whether button is clicked or not
-                    //Log.d("X i Y, pause x,y",  Integer.toString(x_new) + ", " + Integer.toString(y_new) + "\t" + itemPack.getX() + ", " + itemPack.getY());
-                    //background.setVector((x - x_new)/5,(y - y_new)/5);
-
                     break;
-
                 }
                 case MotionEvent.ACTION_MOVE:
                     break;
@@ -447,16 +410,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
                             if (!objectOrNo) {
                                 background.setCenter(xNew, yNew);
-//                                Log.i("clickablesize: ", clickableItems.size()+"");
-//                                Log.i("Chest coordinates:", chest.getX() + ", " + chest.getY());
-//                                Log.i("Player coordinates:", player.getX() + ", " + player.getY());
                                 updateCoordinatesBothMobsAndGamesObjects(xNew, yNew);
-
-
-                                //for (Mob1 enemy : enemies) {
-                                //enemy.updateCoordinates(x - xNew, y - yNew);       //ver 1.44
-                                //}
-                                //updateCoordinatesForList(x,xNew,y,yNew,enemies);
                             }
                         } else {
                             if (world == 1) {
@@ -485,62 +439,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                                 player.setPosition(xNew,yNew);
                         }
                     }
-
-
-                    }
-                        /*
-                        else {
-                            for (GameObject gameObject : trees) {
-                                if (gameObject.getCollision()) {
-                                    gameObject.updateCoordinates(xNew, yNew);
-                                }
-                            }
-
-                        */
-
-
-
-
-                        /*
-                        if (!background.getMoving()) {
-
-
-                            Boolean objectOrNo = false;
-
-                            if (checkIfClickedForList(trees, xNew, yNew) || checkIfClickedForList(stones, xNew, yNew))
-                                objectOrNo = true;
-
-                            if (!objectOrNo) {
-                                background.setCenter(xNew, yNew);
-                                updateCoordinatesForList(x, xNew, y, yNew, trees);
-                                updateCoordinatesForList(x, xNew, y, yNew, stones);
-                                for (Mob1 enemy : enemies) {
-                                    enemy.updateCoordinates(x - xNew, y - yNew);       //ver 1.44
-                                }
-
-                            }
-
-                            y = getScreenH() / 2;
-                            x = getScreenW() / 2; //It's const
-
-                            break;
-
-                        }
-                        else{
-                            background.updateCoordinates(x- xNew,y - yNew);
-                        }
-
-                    }
-                    */
+               }
+                     
             }
         return true;
         }
         //invalidate();
 
     private void showCombatDialog(final Combat opponent) {  // final - check !!!
-//        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-//        LayoutInflater inflater =(LayoutInflater) context.getSystemService(GameActivity.LAYOUT_INFLATER_SERVICE);
-//        builder.setView(inflater.inflate(R.layout.combat_alert, null));
         final Dialog ad = new Dialog(context);
         ad.setContentView(R.layout.combat_alert);
         //set enemy statistics
@@ -825,11 +731,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         inventory.addItem(inventory.getStaminaPotionM());   //enemies drops weapons
         inventory.addItem(inventory.getKey1());
         inventory.addItem(inventory.getKey1());
-//        inventory.addItem(inventory.getSword1());
-//        inventory.addItem(inventory.getHelmet0());
-//        inventory.addItem(inventory.getHelmet1());
-//        inventory.addItem(inventory.getShield0());
-//        inventory.addItem(inventory.getShield1());
     }
 
     public void enterCastle (){
